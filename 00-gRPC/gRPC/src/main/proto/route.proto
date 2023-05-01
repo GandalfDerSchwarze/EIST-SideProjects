@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "grpc";
+
+service Route{
+  rpc GetTimeInTimezone(Timezone) returns (Time){}
+}
+
+message Timezone {
+  string timezone = 1;
+}
+
+message Time {
+  string time = 1;
+}
